@@ -14,14 +14,6 @@ sudo apt install php8.2 php8.2-cli php8.2-fpm php8.2-mysql php8.2-xml php8.2-mbs
 # Vérification de l'installation de PHP
 php -v
 
-# Installation de Composer
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-rm composer-setup.php
-
-# Vérification de l'installation de Composer
-composer --version
-
 # Installation de MariaDB
 sudo apt install -y mariadb-server mariadb-client
 
@@ -47,4 +39,9 @@ git config --global user.name "Maxime LE GENTIL"
 git config --global user.email "maxime.legentil17@gmail.com"
 
 # Clone du dépôt GitHub (remplacez l'URL par celle de votre dépôt)
+cd /var/www/html
+git clone https://github.com/Maxime-LEGENTIL/vitrine-saas.git
+git clone https://github.com/Maxime-LEGENTIL/adminer
+
+cd ~
 git clone https://github.com/Maxime-LEGENTIL/api-saas
